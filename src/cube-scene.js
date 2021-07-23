@@ -68,10 +68,10 @@ export class CubeSceneFactory {
 
       // 12. Define a method to be called when the scene is rendered
       step: function () {
-        scene.traverse(function (cube) {
-          if (cube.name === "wheg") {
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.02;
+        scene.traverse(function (node) {
+          if (node.name === "wheg") {
+            node.rotation.x += 0.01;
+            node.rotation.y += 0.02;
           }
         });
 
