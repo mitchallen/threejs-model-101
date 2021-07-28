@@ -39,6 +39,15 @@ export class CubeSceneFactory {
     // 7. Create a new ThreeJS scene
     var scene = new THREE.Scene();
 
+    // 7.a. - Add some light
+
+    const light = new THREE.HemisphereLight(0xeeeeff, 0x777788, 0.90);
+    light.position.set(0.5, 1, 0.75);
+    scene.add(light);
+
+    // const ambientLight = new THREE.AmbientLight(0x404040, 10); // soft light
+    // scene.add(ambientLight);
+
     // 8. Create a ThreeJS camera
     var camera = new THREE.PerspectiveCamera(fov, aspectRatio, near, far);
     camera.position.z = 5; // Set camera position
